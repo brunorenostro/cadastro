@@ -10,16 +10,41 @@ import sv_ttk
 contador=0
 #('protocol','name','bairro','end','end_n','pedido_obs','pedido_situ')
 
+#id
+#id_user
+#id_solicitante
+#data_created
+#data_updated
+#data_finalizado
+#SITUAï¿½ï¿½O
+#protocolo
+#nome_solicitante
+#telefone_solicitante
+#endereï¿½o_pedido
+#bairro_pedido
+#referencia
+#tipo_pedido
+#observaï¿½ï¿½o
+#foto
+#localizaï¿½ï¿½o
 
-pedido_name="Bruno"
+pedido_id=contador
+id_user=0
+id_solicitante=20
+pedido_year_created="23"
+pedido_data_created="2023-02-08"
+pedido_date_updated=""
+pedido_data_finalizado=""
+pedido_name_solicitante="Dona Fatima"
+pedido_situacao="NAO ATENDIDO"
+pedido_tipo=0
 pedido_telefone="(65)9.9915-5117"
 pedido_bairro="jardim celeste"
 pedido_end="rua das seriemas"
 pedido_n="115"
 pedido_obs="perto da av talhamares"
-pedido_status="NAO ATENDIDO"
-pedido_protocolo=contador
-
+pedido_foto=""
+pedido_protocolo=f'{pedido_tipo}{id_solicitante}{pedido_id}{pedido_year_created}'
 
 
 def get_pedidos_entry():
@@ -83,12 +108,12 @@ bairro_label.place(x=20,y=120)
 bairro_entry=ttk.Entry(pedido_panel, width=30)
 bairro_entry.place(x=220,y=110)
 
-#endereço
+#endereï¿½o
 end_label=ttk.Label(pedido_panel, text="ENDERECO")
 end_label.place(x=20,y=160)
 end_entry=ttk.Entry(pedido_panel, width=30)
 end_entry.place(x=220,y=150)
-#número
+#nï¿½mero
 numero_label=ttk.Label(pedido_panel, text="NUNERO")
 numero_label.place(x=20,y=200)
 numero_entry=ttk.Entry(pedido_panel, width=30)
@@ -98,7 +123,7 @@ telefone_label=ttk.Label(pedido_panel, text="TELEFONE")
 telefone_label.place(x=20,y=240)
 telefone_entry=ttk.Entry(pedido_panel, width=30)
 telefone_entry.place(x=220,y=230)
-#observação
+#observaï¿½ï¿½o
 obs_label=ttk.Label(pedido_panel, text="OBSERVACAO")
 obs_label.place(x=20,y=280)
 obs_entry=ttk.Entry(pedido_panel, width=30)
@@ -126,7 +151,7 @@ for equipe in equipes:
         )
 equipe_label.place(x=20,y=340)
 
-#localização
+#localizaï¿½ï¿½o
 
 local_label=ttk.Label(root, text="LOCALIZACAO")
 local_label.place(x=20,y=390)
